@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+<style>
+    body {
+    color: grey;
+    font-family: 'Lato';
+    text-align: center;
+    background: #e8edf159;
+    margin: 15px;
+    /* height: 300px; */
+  }
+  
+  h1 {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .form-container {
+    text-align: left;
+    background: rgba(20, 64, 157,1);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 1px 2px 3px black;
+  }
+  
+  label {
+    color:  white;
+    text-transform: uppercase;
+  }
+  
+  input {
+    background: transparent;
+    font-size: 14px;
+    display: block;
+    padding: 10px 30px 10px 5px;
+    margin: 10px 0 40px;
+    border: 2px solid white;
+    border-bottom: 2px solid grey;
+  }
+  
+  input:focus {
+    outline: none;
+    border-bottom: 2px solid #66cc99;;
+  }
+  
+  .radio-question input {
+    margin: 10px;
+    padding: 0;
+  }
+  
+  .radio-input {
+    display: inline;
+  }
+  
+  .button {
+    background: black;
+    border: 0;
+    padding: 15px 30px;
+    margin-top: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+  
+  .button:hover {
+    background: #5ec190;
+  }
+  .password-rules {
+    font-size: 10px;
+    margin-top: -20px;
+    margin-bottom: 40px;
+  }
+  .error-message {
+    color: red;
+    margin-top: -30px;
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+        
+</style>
+<body>
+	<h1 style="color: black;">Registration form</h1>
+	<div class="form-container">
+    <form action ='/register'method='post'>
+      <label for="FullName">Name */ <span>పేరు</span></label>
+      <input type="text"  id="Name" name="name" required/><p class="error-message"></p>
+          <label for="Age">Age */ <span>వయస్సు</span></label>
+      <input type="text"  id="Age" name="age" required/><p class="error-message"></p>
+          <label for="Mobile">Mobile Number */ <span>సంప్రదంచాల్సిన నెం</span></label>
+          <input type="text" name="mobilenumber" placeholder="" required pattern="[0-9]{10}" title="Mobile number should be 10 digits"/>
+          <label for="District">District * /<span>జిల్లా</span></label>
+      <input type="text" name="district" required/><p class="error-message" required></p>
+          <label for="Area">Area * /<span>ప్రాంతం</span></label>
+      <input type="text" name="area" required/><p class="error-message" required></p>
+      <p class="error-message"></p>
+      
+          <label for="interested">Are You Interseted To Work In Field ? * <span>/</span><span>మీరు ఫీల్డ్ వర్క్ చేయడానికి ఆసక్తి కలిగి ఉన్నారా</span></label><br>
+      <select name="interested" id="" required>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+          </select><br>
+          <br>
+      <p class="error-message"></p>
+      <input id="loginbtn" class="button" type="submit"  name="submit" />
+      </div>
+  </form>
+<div class="mssg bg-danger">
+	<span id="check"></span>
+</div>
+<div>
+</div>
+<div id="LangTable"><a href="/login" id="aa"></a>
+</div>
+</div>
+</body>
+</html>
